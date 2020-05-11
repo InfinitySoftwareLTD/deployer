@@ -41,7 +41,7 @@ Follow this [full guide](https://blog.ark.io/ark-deployer-v2-55b96555d10e) to ge
 
 ```bash
 sudo apt-get update && sudo apt-get install -y git curl
-git clone https://github.com/ArkEcosystem/deployer.git ark-deployer && cd ark-deployer
+git clone https://github.com/Plusid/deployer.git deployer && cd deployer
 source setup.sh
 ```
 
