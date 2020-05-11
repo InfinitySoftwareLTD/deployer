@@ -1,3 +1,4 @@
+
 #!/usr/bin/env bash
 
 update_core_handle()
