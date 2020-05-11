@@ -199,7 +199,7 @@ To use a config file for installation, simply use the `--config` argument. For e
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to security@ark.io. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to info@infiniysoftware.io. All security vulnerabilities will be promptly addressed.
 
 ## Credits
 
