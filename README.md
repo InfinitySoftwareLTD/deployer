@@ -12,7 +12,7 @@ You can deploy a bridgechain and explorer within its own virtual setup on your D
 1. Install Vagrant on your local computer
 2. Clone the ark-deployer from our repository
 ```bash
-git clone https://github.com/ArkEcosystem/deployer.git ark-deployer && cd ark-deployer
+git clone https://github.com/Plusid/deployer.git deployer && cd deployer
 ```
 3. Run the vagrant command
 ```bash
@@ -207,4 +207,4 @@ This project exists thanks to all the people who [contribute](../../contributors
 
 ## License
 
-[MIT](LICENSE) © [ARK Ecosystem](https://ark.io)
+[MIT](LICENSE) © [InfinitySoftware](https://www.infinitysoftware.io)
