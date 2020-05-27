@@ -105,7 +105,7 @@ app_install_core()
 
     rm -rf "$CONFIG_PATH_MAINNET" "$CONFIG_PATH_DEVNET" "$CONFIG_PATH_TESTNET" "$BRIDGECHAIN_PATH"
 
-    git clone -b 1e5 https://github.com/Plusid/core-master.git "$BRIDGECHAIN_PATH"
+    git clone https://github.com/ArkEcosystem/core.git --branch 2.6.37 --single-branch "$BRIDGECHAIN_PATH"
 
     local DYNAMIC_FEE_ENABLED="false"
     if [[ "$FEE_DYNAMIC_ENABLED" == "Y" ]]; then
@@ -292,7 +292,7 @@ app_install_core()
         fi
         git config --global user.email "support@ark.io"
         git config --global user.name "ARK Deployer"
-        git checkout -b newbranch1e5
+        git checkout -b chore/bridgechain-changes
         if [[ "$GIT_CORE_ORIGIN" != "" ]]; then
             local ALIAS=$(echo $CORE_ALIAS | tr -cs '[:alnum:]\r\n' '-' | tr '[:upper:]' '[:lower:]')
             read -r -d '' COMMANDS << EOM || true
@@ -309,9 +309,9 @@ if [ "\$FAILED" == "Y" ]; then
 fi
 
 cd "$BRIDGECHAIN_PATH_RAW"
-HAS_REMOTE=\$(git branch -a | fgrep -o "remotes/origin/1e5")
+HAS_REMOTE=\$(git branch -a | fgrep -o "remotes/origin/chore/bridgechain-changes")
 if [ ! -z "\$HAS_REMOTE" ]; then
-    git checkout 1e5
+    git checkout chore/bridgechain-changes
 fi
 
 YARN_SETUP="N"
@@ -337,7 +337,7 @@ EOM
         git commit -m "chore: prepare new network config 🎉"
         if [[ "$GIT_CORE_ORIGIN" != "" ]]; then
             git remote set-url origin "$GIT_CORE_ORIGIN"
-            git push --set-upstream origin 1e5 || local CANT_PUSH="Y"
+            git push --set-upstream origin chore/bridgechain-changes || local CANT_PUSH="Y"
             if [[ "$CANT_PUSH" == "Y" ]]; then
                 error "Could not push Git changes to '$GIT_CORE_ORIGIN'"
             fi
