@@ -337,7 +337,7 @@ EOM
         git commit -m "chore: prepare new network config 🎉"
         if [[ "$GIT_CORE_ORIGIN" != "" ]]; then
             git remote set-url origin "$GIT_CORE_ORIGIN"
-            git push --set-upstream origin chore/bridgechain-changes || local CANT_PUSH="Y"
+            git push --set-upstream origin development || local CANT_PUSH="Y"
             if [[ "$CANT_PUSH" == "Y" ]]; then
                 error "Could not push Git changes to '$GIT_CORE_ORIGIN'"
             fi
