@@ -292,7 +292,7 @@ app_install_core()
         fi
         git config --global user.email "support@ark.io"
         git config --global user.name "ARK Deployer"
-        git checkout -b 1e5
+        git checkout -b newbranch1e5
         if [[ "$GIT_CORE_ORIGIN" != "" ]]; then
             local ALIAS=$(echo $CORE_ALIAS | tr -cs '[:alnum:]\r\n' '-' | tr '[:upper:]' '[:lower:]')
             read -r -d '' COMMANDS << EOM || true
