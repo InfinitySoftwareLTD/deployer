@@ -105,7 +105,7 @@ app_install_core()
 
     rm -rf "$CONFIG_PATH_MAINNET" "$CONFIG_PATH_DEVNET" "$CONFIG_PATH_TESTNET" "$BRIDGECHAIN_PATH"
 
-    git clone -b 1e5 https://github.com/Plusid/core-master.git "$BRIDGECHAIN_PATH"
+    git clone -b development https://github.com/Plusid/core-master.git "$BRIDGECHAIN_PATH"
 
     local DYNAMIC_FEE_ENABLED="false"
     if [[ "$FEE_DYNAMIC_ENABLED" == "Y" ]]; then
@@ -309,9 +309,9 @@ if [ "\$FAILED" == "Y" ]; then
 fi
 
 cd "$BRIDGECHAIN_PATH_RAW"
-HAS_REMOTE=\$(git branch -a | fgrep -o "remotes/origin/chore/bridgechain-changes")
+HAS_REMOTE=\$(git branch -a | fgrep -o "remotes/origin/development")
 if [ ! -z "\$HAS_REMOTE" ]; then
-    git checkout chore/bridgechain-changes
+    git checkout development
 fi
 
 YARN_SETUP="N"
