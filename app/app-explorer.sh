@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+e#!/usr/bin/env bash
 
 app_install_explorer()
 {
@@ -9,7 +9,7 @@ app_install_explorer()
     heading "Installing Explorer to '$EXPLORER_PATH'..."
 
     rm -rf "$EXPLORER_PATH"
-    git clone -b master https://github.com/Plusid/infinity-explorer-origin.git "$EXPLORER_PATH" && cd "$EXPLORER_PATH"
+    git clone -b origin https://github.com/Plusid/core-explorer.git "$EXPLORER_PATH" && cd "$EXPLORER_PATH"
     yarn
     yarn add connect-history-api-fallback express
 
