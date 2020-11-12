@@ -64,7 +64,7 @@ EOF
         git commit -m "chore: prepare new network Infinity Hedge 🎉"
         if [[ "$GIT_EXPLORER_ORIGIN" != "" ]]; then
             git remote set-url origin "$GIT_EXPLORER_ORIGIN"
-            git push --set-upstream origin chore/bridgechain-changes || local CANT_PUSH="Y"
+            git push --set-upstream origin chore/bridgechain-changes/hedge || local CANT_PUSH="Y"
             if [[ "$CANT_PUSH" == "Y" ]]; then
                 echo "Could not push Git changes to '$GIT_EXPLORER_ORIGIN'"
             fi
