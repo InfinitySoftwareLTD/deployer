@@ -9,7 +9,7 @@ app_install_explorer()
     heading "Installing Explorer to '$EXPLORER_PATH'..."
 
     rm -rf "$EXPLORER_PATH"
-    git clone -b tempdev https://github.com/Plusid/core-explorer-ok.git "$EXPLORER_PATH" && cd "$EXPLORER_PATH"
+    git clone -b tempdev https://github.com/Plusid/core-explorer.git "$EXPLORER_PATH" && cd "$EXPLORER_PATH"
     yarn
     yarn add connect-history-api-fallback express
 
@@ -57,11 +57,11 @@ EOF
         if [[ "$GIT_USE_SSH" == "Y" ]]; then
             git config url."git@github.com:".insteadOf "https://github.com/"
         fi
-        git config --global user.email "support@ark.io"
-        git config --global user.name "ARK Deployer"
+        git config --global user.email "support@infinitysoftware.io"
+        git config --global user.name "HHH Deployer"
         git checkout -b chore/bridgechain-changes
         git add .
-        git commit -m "chore: prepare new network config 🎉"
+        git commit -m "chore: prepare new network Infinity Hedge 🎉"
         if [[ "$GIT_EXPLORER_ORIGIN" != "" ]]; then
             git remote set-url origin "$GIT_EXPLORER_ORIGIN"
             git push --set-upstream origin chore/bridgechain-changes || local CANT_PUSH="Y"
