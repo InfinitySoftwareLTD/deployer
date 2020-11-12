@@ -60,7 +60,7 @@ update_core_add_upstream_remote()
 {
 	heading "Fetching from upstream..."
 	cd "$BRIDGECHAIN_PATH"
-	git remote add upstream https://github.com/ArkEcosystem/core-master-hedge.git > /dev/null 2>&1 || true
+	git remote add upstream https://github.com/InfinitySoftwareLTD/core-master-hedge.git > /dev/null 2>&1 || true
 	git fetch && git fetch --tags upstream
 }
 
