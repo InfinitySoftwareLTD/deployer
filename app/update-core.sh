@@ -60,15 +60,15 @@ update_core_add_upstream_remote()
 {
 	heading "Fetching from upstream..."
 	cd "$BRIDGECHAIN_PATH"
-	git remote add upstream https://github.com/ArkEcosystem/core.git > /dev/null 2>&1 || true
+	git remote add upstream https://github.com/ArkEcosystem/core-master-hedge.git > /dev/null 2>&1 || true
 	git fetch && git fetch --tags upstream
 }
 
 update_core_merge_from_upstream()
 {
 	heading "Merging from upstream..."
-	git config --global user.email "support@ark.io"
-    git config --global user.name "ARK Deployer"
+	git config --global user.email "support@infinitysoftware.io"
+    git config --global user.name "HHH Deployer"
 	git checkout -b update/"$TARGET_VERSION" || git checkout -b update/"${TARGET_VERSION}_${TIMESTAMP}"
 	git merge "$TARGET_VERSION" || true
 	info "Done"
