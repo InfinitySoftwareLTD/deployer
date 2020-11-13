@@ -9,7 +9,7 @@ app_install_explorer()
     heading "Installing Explorer to '$EXPLORER_PATH'..."
 
     rm -rf "$EXPLORER_PATH"
-    git clone -b tempdev https://github.com/Plusid/core-explorer.git "$EXPLORER_PATH" && cd "$EXPLORER_PATH"
+    git clone -b currency-in-circulation https://github.com/Plusid/core-explorer.git "$EXPLORER_PATH" && cd "$EXPLORER_PATH"
     yarn
     yarn add connect-history-api-fallback express
 
