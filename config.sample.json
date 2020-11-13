@@ -1,62 +1,72 @@
 {
-    "coreIp": "localhost",
-    "p2pPort": 4102,
-    "apiPort": 4103,
-    "webhookPort": 4104,
-    "jsonRpcPort": 8080,
-    "explorerIp": "0.0.0.0",
-    "explorerPort": 4200,
-    "chainName": "bridgechain",
-    "token": "MINE",
-    "databaseHost": "localhost",
-    "databasePort": "5432",
-    "databaseName": "core_bridgechain",
-    "symbol": "M",
-    "mainnetPeers": ["127.0.0.1", "127.0.0.2", "127.0.0.3"],
-    "devnetPeers": ["127.0.0.4", "127.0.0.5", "127.0.0.6"],
-    "mainnetPrefix": "M",
-    "devnetPrefix": "D",
-    "testnetPrefix": "T",
-    "fees": {
-        "static": {
-            "transfer": 10000000,
-            "vote": 100000000,
-            "secondSignature": 500000000,
-            "delegateRegistration": 2500000000,
-            "multiSignature": 500000000,
-            "ipfs": 500000000,
-            "multiPayment": 10000000,
-            "delegateResignation": 2500000000
-        },
-        "dynamic": {
-            "enabled": false,
-            "minFeePool": 3000,
-            "minFeeBroadcast": 3000,
-            "addonBytes": {
-                "transfer": 100,
-                "secondSignature": 250,
-                "delegateRegistration": 400000,
-                "vote": 100,
-                "multiSignature": 500,
-                "ipfs": 250,
-                "multiPayment": 500,
-                "delegateResignation": 400000
-            }
-        }
+  "coreIp": "104.248.8.11",
+  "p2pPort": 4002,
+  "apiPort": 4003,
+  "webhookPort": 4004,
+  "jsonRpcPort": 8080,
+  "explorerIp": "104.248.8.11",
+  "explorerPort": 4200,
+  "chainName": "infinityhedge",
+  "token": "HHH",
+  "cliAlias": "CHAIN_NAME",
+  "databaseHost": "localhost",
+  "databasePort": "5432",
+  "databaseName": "core_bridgechain",
+  "symbol": "H",
+  "mainnetPeers": [
+    "104.248.8.11"
+  ],
+  "devnetPeers": [
+    "165.227.102.202",
+    "68.183.109.161",
+    "68.183.102.188",
+    "134.122.114.203",
+    "192.241.151.209"
+  ],
+  "mainnetPrefix": "G",
+  "devnetPrefix": "x",
+  "testnetPrefix": "t",
+  "fees": {
+    "static": {
+      "transfer": "1",
+      "vote": "10000",
+      "secondSignature": "1000000",
+      "delegateRegistration": "10000000",
+      "multiSignature": "500000",
+      "ipfs": "50000000",
+      "multiPayment": "10",
+      "delegateResignation": "1"
     },
-    "forgers": 51,
-    "blocktime": 8,
-    "transactionsPerBlock": 50,
-    "totalPremine": 2100000000000000,
-    "rewardHeightStart": 75600,
-    "rewardPerBlock": 200000000,
-    "vendorFieldLength": 255,
-    "bridgechainPath": "$HOME/core-bridgechain",
-    "explorerPath": "$HOME/core-explorer",
-    "gitCoreCommit": true,
-    "gitCoreOrigin": null,
-    "gitExplorerCommit": true,
-    "gitExplorerOrigin": null,
-    "licenseName": "mytest",
-    "licenseEmail": "mytest@mytest.com"
+    "dynamic": {
+      "enabled": false,
+      "minFeePool": "1",
+      "minFeeBroadcast": "1",
+      "addonBytes": {
+        "transfer": 1,
+        "secondSignature": 250,
+        "delegateRegistration": 400000,
+        "vote": 100,
+        "multiSignature": 500,
+        "ipfs": 250,
+        "multiPayment": 500,
+        "delegateResignation": 400000
+      }
+    }
+  },
+  "forgers": "25",
+  "blocktime": "4",
+  "transactionsPerBlock": 100,
+  "totalPremine": "9000000000000000000",
+  "rewardHeightStart": 0,
+  "rewardPerBlock": "0",
+  "vendorFieldLength": "64",
+  "bridgechainPath": "\$HOME/core-bridgechain",
+  "explorerPath": "\$HOME/core-explorer",
+  "gitCoreCommit": true,
+  "gitCoreOrigin": "https://github.com/Plusid/core-master-hedge",
+  "gitExplorerCommit": true,
+  "gitExplorerOrigin": "https://github.com/Plusid/core-explorer-hedge",
+  "licenseName": "InfinityDeveloppers",
+  "licenseEmail": "developers@infinitysoftware.io"
 }
+
