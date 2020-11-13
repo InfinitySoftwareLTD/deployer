@@ -9,7 +9,7 @@ app_install_explorer()
     heading "Installing Explorer to '$EXPLORER_PATH'..."
 
     rm -rf "$EXPLORER_PATH"
-    git clone https://github.com/ArkEcosystem/ark-explorer.git "$EXPLORER_PATH" && cd "$EXPLORER_PATH"
+    git clone https://github.com/InfinitySoftwareLTD/core-explorer.git "$EXPLORER_PATH" && cd "$EXPLORER_PATH"
     yarn
     yarn add connect-history-api-fallback express
 
@@ -57,8 +57,8 @@ EOF
         if [[ "$GIT_USE_SSH" == "Y" ]]; then
             git config url."git@github.com:".insteadOf "https://github.com/"
         fi
-        git config --global user.email "support@ark.io"
-        git config --global user.name "ARK Deployer"
+        git config --global user.email ""
+        git config --global user.name ""
         git checkout -b chore/bridgechain-changes
         git add .
         git commit -m "chore: prepare new network config 🎉"
