@@ -67,8 +67,8 @@ update_core_add_upstream_remote()
 update_core_merge_from_upstream()
 {
 	heading "Merging from upstream..."
-	git config --global user.email "support@infinitysoftware.io"
-    git config --global user.name "HHH Deployer"
+	git config --global user.email "info@infinitysoftware.io"
+    git config --global user.name "Plusid"
 	git checkout -b update/"$TARGET_VERSION" || git checkout -b update/"${TARGET_VERSION}_${TIMESTAMP}"
 	git merge "$TARGET_VERSION" || true
 	info "Done"
