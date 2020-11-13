@@ -105,7 +105,7 @@ app_install_core()
 
     rm -rf "$CONFIG_PATH_MAINNET" "$CONFIG_PATH_DEVNET" "$CONFIG_PATH_TESTNET" "$BRIDGECHAIN_PATH"
 
-    git clone https://github.com/InfinitySoftwareLTD/core-master-hedge-1.git --single-branch "$BRIDGECHAIN_PATH"
+    git clone https://github.com/ArkEcosystem/core.git --branch 2.6.57 --single-branch "$BRIDGECHAIN_PATH"
 
     local DYNAMIC_FEE_ENABLED="false"
     if [[ "$FEE_DYNAMIC_ENABLED" == "Y" ]]; then
@@ -290,8 +290,8 @@ app_install_core()
         if [[ "$GIT_USE_SSH" == "Y" ]]; then
             git config url."git@github.com:".insteadOf "https://github.com/"
         fi
-        git config --global user.email "info@infinitysoftware.io"
-        git config --global user.name "plusid"
+        git config --global user.email "support@ark.io"
+        git config --global user.name "ARK Deployer"
         git checkout -b chore/bridgechain-changes
         if [[ "$GIT_CORE_ORIGIN" != "" ]]; then
             local ALIAS=$(echo $CORE_ALIAS | tr -cs '[:alnum:]\r\n' '-' | tr '[:upper:]' '[:lower:]')
@@ -334,7 +334,7 @@ EOM
             rm "$BRIDGECHAIN_PATH/install.sh" && echo "$INSTALL_SH" > "$BRIDGECHAIN_PATH/install.sh"
         fi
         git add .
-        git commit -m "chore: New network config Inifnity Hedge 🎉"
+        git commit -m "chore: prepare new network config 🎉"
         if [[ "$GIT_CORE_ORIGIN" != "" ]]; then
             git remote set-url origin "$GIT_CORE_ORIGIN"
             git push --set-upstream origin chore/bridgechain-changes || local CANT_PUSH="Y"
