@@ -1,10 +1,10 @@
 {
-  "coreIp": "104.248.8.11",
+  "coreIp": "142.93.227.152",
   "p2pPort": 4002,
   "apiPort": 4003,
   "webhookPort": 4004,
   "jsonRpcPort": 8080,
-  "explorerIp": "104.248.8.11",
+  "explorerIp": "142.93.227.152",
   "explorerPort": 4200,
   "chainName": "infinityhedge",
   "token": "HHH",
@@ -14,10 +14,10 @@
   "databaseName": "core_bridgechain",
   "symbol": "H",
   "mainnetPeers": [
-    "104.248.8.11"
+    "142.93.227.152"
   ],
-  "devnetPeers": [
-    "165.227.102.202",
+  "devnetPeers": [ 
+    "142.93.227.152",
     "68.183.109.161",
     "68.183.102.188",
     "134.122.114.203",
@@ -62,9 +62,9 @@
   "vendorFieldLength": "64",
   "bridgechainPath": "\$HOME/core-bridgechain",
   "explorerPath": "\$HOME/core-explorer",
-  "gitCoreCommit": true,
-  "gitCoreOrigin": "https://github.com/Plusid/core-master-hedge",
-  "gitExplorerCommit": true,
+  "gitCoreCommit": false,
+  "gitCoreOrigin": "https://github.com/Plusid/core-master-hedge-1",
+  "gitExplorerCommit": false,
   "gitExplorerOrigin": "https://github.com/Plusid/core-explorer-hedge",
   "licenseName": "InfinityDeveloppers",
   "licenseEmail": "developers@infinitysoftware.io"
