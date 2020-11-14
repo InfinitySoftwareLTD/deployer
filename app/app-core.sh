@@ -283,15 +283,20 @@ app_install_core()
         fi
         sed -i -E "s/^(Copyright.+Ark Ecosystem.*)$/\1\n$LICENSE/g" "$BRIDGECHAIN_PATH/LICENSE"
     fi
-
+    
+     
+    echo "GIT_CORE_COMMIT"
+    
     if [[ "$GIT_CORE_COMMIT" == "Y" ]]; then
         echo "Committing changes..."
         cd "$BRIDGECHAIN_PATH"
         if [[ "$GIT_USE_SSH" == "Y" ]]; then
             git config url."git@github.com:".insteadOf "https://github.com/"
         fi
+        echo "start git config"
         git config --global user.email "info@infinitysoftware.io"
         git config --global user.name "Plusid"
+        echo "end git config"
         git checkout -b chore/bridgechain-changes
         if [[ "$GIT_CORE_ORIGIN" != "" ]]; then
             local ALIAS=$(echo $CORE_ALIAS | tr -cs '[:alnum:]\r\n' '-' | tr '[:upper:]' '[:lower:]')
@@ -301,13 +306,14 @@ alias ark="$BRIDGECHAIN_PATH_RAW/packages/core/bin/run"
 echo 'alias $ALIAS="$BRIDGECHAIN_PATH_RAW/packages/core/bin/run"' >> ~/.bashrc
 
 rm -rf "$BRIDGECHAIN_PATH_RAW"
+echo "git clone GIT_CORE_ORIGIN"
 git clone "$GIT_CORE_ORIGIN" "$BRIDGECHAIN_PATH_RAW" || FAILED="Y"
 if [ "\$FAILED" == "Y" ]; then
     echo "Failed to fetch core repo with origin '$GIT_CORE_ORIGIN'"
 
     exit 1
 fi
-
+echo "git branch -a | fgrep -o remotes/origin/chore/bridgechain-changes"
 cd "$BRIDGECHAIN_PATH_RAW"
 HAS_REMOTE=\$(git branch -a | fgrep -o "remotes/origin/chore/bridgechain-changes")
 if [ ! -z "\$HAS_REMOTE" ]; then
