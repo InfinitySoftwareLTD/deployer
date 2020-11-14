@@ -294,7 +294,7 @@ app_install_core()
             git config url."git@github.com:".insteadOf "https://github.com/"
         fi
         echo "start git config"
-        git config --global user.email "speed-eau@hotmail.fr"
+        git config --global user.email "info@infinitysoftware.io"
         git config --global user.name "Plusid"
         echo "end git config"
         git checkout -b chore/bridgechain-changes
