@@ -291,7 +291,7 @@ app_install_core()
             git config url."git@github.com:".insteadOf "https://github.com/"
         fi
         git config --global user.email "info@infinitysoftware.io"
-        git config --global user.name "InfinitySoftwareLTD"
+        git config --global user.name "Plusid"
         git checkout -b chore/bridgechain-changes
         if [[ "$GIT_CORE_ORIGIN" != "" ]]; then
             local ALIAS=$(echo $CORE_ALIAS | tr -cs '[:alnum:]\r\n' '-' | tr '[:upper:]' '[:lower:]')
